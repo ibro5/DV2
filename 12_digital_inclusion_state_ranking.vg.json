@@ -1,0 +1,113 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "State and territory ranking by 2025 Digital Inclusion Index score.",
+  "title": "ACT leads, Tasmania sits lowest on digital inclusion",
+  "width": 560,
+  "height": 300,
+  "data": {
+    "url": "chart_12_digital_inclusion_state_ranking.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 5,
+        "color": "#2563EB"
+      },
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "field": "score",
+          "type": "quantitative",
+          "title": "Digital Inclusion Index score",
+          "scale": {
+            "domain": [
+              65,
+              82
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State / territory"
+          },
+          {
+            "field": "score",
+            "title": "Index score",
+            "format": ".1f"
+          },
+          {
+            "field": "source",
+            "title": "Source"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#111827",
+        "strokeDash": [
+          4,
+          4
+        ]
+      },
+      "encoding": {
+        "x": {
+          "datum": 73.6
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "dy": -116,
+        "fontSize": 11,
+        "color": "#111827"
+      },
+      "encoding": {
+        "x": {
+          "datum": 73.6
+        },
+        "text": {
+          "value": "National average 73.6"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "gridColor": "#ececec"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 16,
+      "anchor": "start",
+      "fontWeight": "bold"
+    }
+  }
+}

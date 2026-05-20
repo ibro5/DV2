@@ -1,0 +1,128 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Snapshot of key AI-at-work readiness indicators among Australian computer-based workers.",
+  "title": "AI use is ahead of workplace preparation",
+  "width": 560,
+  "height": 300,
+  "data": {
+    "url": "chart_01_ai_readiness_snapshot.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 5
+      },
+      "encoding": {
+        "y": {
+          "field": "metric",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "title": "Share of workers (%)",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          }
+        },
+        "color": {
+          "field": "group",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Adoption",
+              "Preparation",
+              "Risk"
+            ],
+            "range": [
+              "#2563EB",
+              "#16A34A",
+              "#DC2626"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "metric",
+            "title": "Measure"
+          },
+          {
+            "field": "value",
+            "title": "Percent",
+            "format": ".0f"
+          },
+          {
+            "field": "source",
+            "title": "Source"
+          },
+          {
+            "field": "source_url",
+            "title": "URL"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "metric",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "value",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "value": "#111827"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "gridColor": "#ececec"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 16,
+      "anchor": "start",
+      "fontWeight": "bold"
+    }
+  }
+}

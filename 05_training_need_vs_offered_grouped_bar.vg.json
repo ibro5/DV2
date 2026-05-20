@@ -1,0 +1,97 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Compares desired AI training with current training offered.",
+  "title": "Workers want training in areas not yet widely offered",
+  "width": 560,
+  "height": 320,
+  "data": {
+    "url": "chart_05_training_need_vs_offered.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+  },
+  "encoding": {
+    "y": {
+      "field": "topic",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null
+    },
+    "x": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Share of workers (%)",
+      "scale": {
+        "domain": [
+          0,
+          40
+        ]
+      }
+    },
+    "color": {
+      "field": "type",
+      "type": "nominal",
+      "title": null,
+      "scale": {
+        "domain": [
+          "Desired training",
+          "Current training offered"
+        ],
+        "range": [
+          "#2563EB",
+          "#F97316"
+        ]
+      }
+    },
+    "yOffset": {
+      "field": "type"
+    },
+    "tooltip": [
+      {
+        "field": "topic",
+        "title": "Training area"
+      },
+      {
+        "field": "type",
+        "title": "Measure"
+      },
+      {
+        "field": "value",
+        "title": "Percent",
+        "format": ".0f"
+      },
+      {
+        "field": "source",
+        "title": "Source"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "gridColor": "#ececec"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 16,
+      "anchor": "start",
+      "fontWeight": "bold"
+    }
+  }
+}

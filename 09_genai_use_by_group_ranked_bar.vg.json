@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "GenAI use varies widely across Australian groups.",
+  "title": "Australia's AI divide follows work, education and age",
+  "width": 620,
+  "height": 420,
+  "data": {
+    "url": "chart_09_genai_use_by_group.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 5
+      },
+      "encoding": {
+        "y": {
+          "field": "group",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "title": "Recently used GenAI (%)",
+          "scale": {
+            "domain": [
+              0,
+              85
+            ]
+          }
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "range": [
+              "#2563EB",
+              "#16A34A",
+              "#F97316",
+              "#7C3AED",
+              "#DC2626",
+              "#0891B2"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "group",
+            "title": "Group"
+          },
+          {
+            "field": "value",
+            "title": "Percent",
+            "format": ".1f"
+          },
+          {
+            "field": "category",
+            "title": "Category"
+          },
+          {
+            "field": "source",
+            "title": "Source"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontSize": 11
+      },
+      "encoding": {
+        "y": {
+          "field": "group",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "value",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "color": {
+          "value": "#111827"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "gridColor": "#ececec"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 16,
+      "anchor": "start",
+      "fontWeight": "bold"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Top AI tools consciously used by Australian workers.",
+  "title": "Text-based AI tools dominate workplace use",
+  "width": 560,
+  "height": 300,
+  "data": {
+    "url": "chart_06_top_ai_tools.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 5,
+        "color": "#2563EB"
+      },
+      "encoding": {
+        "y": {
+          "field": "tool",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              45
+            ]
+          },
+          "title": "Share of workers (%)"
+        },
+        "tooltip": [
+          {
+            "field": "tool",
+            "title": "Tool type"
+          },
+          {
+            "field": "value",
+            "title": "Percent",
+            "format": ".0f"
+          },
+          {
+            "field": "source",
+            "title": "Source"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "tool",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "value",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "value": "#111827"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "gridColor": "#ececec"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 16,
+      "anchor": "start",
+      "fontWeight": "bold"
+    }
+  }
+}

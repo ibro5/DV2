@@ -1,0 +1,128 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Self-reported AI proficiency by generation among Australian computer-based workers.",
+  "title": "AI confidence is much lower for older generations",
+  "width": 520,
+  "height": 300,
+  "data": {
+    "url": "chart_07_generation_proficiency.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 5
+      },
+      "encoding": {
+        "x": {
+          "field": "generation",
+          "type": "nominal",
+          "sort": [
+            "Gen Z",
+            "Millennials",
+            "Gen X",
+            "Baby Boomers"
+          ],
+          "title": null
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "title": "Self-reported AI proficiency (%)",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          }
+        },
+        "color": {
+          "field": "generation",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "range": [
+              "#2563EB",
+              "#4F46E5",
+              "#F97316",
+              "#DC2626"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "generation",
+            "title": "Generation"
+          },
+          {
+            "field": "value",
+            "title": "Percent",
+            "format": ".0f"
+          },
+          {
+            "field": "source",
+            "title": "Source"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -8,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "generation",
+          "type": "nominal",
+          "sort": [
+            "Gen Z",
+            "Millennials",
+            "Gen X",
+            "Baby Boomers"
+          ]
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "value",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "value": "#111827"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "gridColor": "#ececec"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 16,
+      "anchor": "start",
+      "fontWeight": "bold"
+    }
+  }
+}

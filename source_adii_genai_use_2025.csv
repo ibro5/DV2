@@ -1,0 +1,19 @@
+dataset,indicator,group,category,value,unit,source,source_url
+genai_use_by_group,Recently used GenAI,Students,Study/work role,78.9,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,18–34 year olds,Age,69.1,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,Professionals,Occupation,67.9,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,Bachelor degree,Education,62.0,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,Language other than English at home,Language,58.8,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,Managers,Occupation,52.2,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,English-only speakers,Language,41.4,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,Completed high school,Education,37.2,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,People with disability,Demographic,33.9,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,Labourers,Occupation,31.8,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,Machinery operators,Occupation,26.7,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,65–74 year olds,Age,15.5,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_by_group,Recently used GenAI,Left school at Year 10,Education,4.2,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_types,Generate text,Recent GenAI users,Use type,82.6,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_types,Generate images,Recent GenAI users,Use type,41.5,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_types,Create programming code,Recent GenAI users,Use type,19.9,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_types,Paid for premium tools,Australians,Use type,13.7,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/
+genai_use_types,Chatbot for social connection,Australians,Use type,8.6,percent,Australian Digital Inclusion Index 2025,https://digitalinclusionindex.org.au/case-study-the-ai-divide-in-australia/

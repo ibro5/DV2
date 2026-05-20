@@ -1,0 +1,112 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "How Australians are using GenAI tools, among recent users.",
+  "title": "Most GenAI use is still text-based",
+  "width": 560,
+  "height": 250,
+  "data": {
+    "url": "chart_10_genai_use_types.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 5,
+        "color": "#0891B2"
+      },
+      "encoding": {
+        "y": {
+          "field": "use",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "title": "Share of recent GenAI users / Australians (%)",
+          "scale": {
+            "domain": [
+              0,
+              90
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "use",
+            "title": "Use"
+          },
+          {
+            "field": "value",
+            "title": "Percent",
+            "format": ".1f"
+          },
+          {
+            "field": "respondent_base",
+            "title": "Base"
+          },
+          {
+            "field": "source",
+            "title": "Source"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "use",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "value",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "color": {
+          "value": "#111827"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "gridColor": "#ececec"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 16,
+      "anchor": "start",
+      "fontWeight": "bold"
+    }
+  }
+}

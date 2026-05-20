@@ -1,0 +1,165 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dumbbell chart showing the size of gaps between AI use and worker preparation indicators.",
+  "title": "The biggest story is the gap",
+  "width": 560,
+  "height": 240,
+  "data": {
+    "url": "chart_02_readiness_gaps.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 4,
+        "color": "#CBD5E1"
+      },
+      "encoding": {
+        "y": {
+          "field": "gap",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "Use vs training",
+            "Use vs confidence",
+            "Want training vs received training"
+          ]
+        },
+        "x": {
+          "field": "end",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "title": "Share of workers (%)"
+        },
+        "x2": {
+          "field": "start"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 120,
+        "color": "#2563EB"
+      },
+      "encoding": {
+        "y": {
+          "field": "gap",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "start",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "start_label",
+            "title": "Measure"
+          },
+          {
+            "field": "start",
+            "title": "Percent",
+            "format": ".0f"
+          },
+          {
+            "field": "source",
+            "title": "Source"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 120,
+        "color": "#F97316"
+      },
+      "encoding": {
+        "y": {
+          "field": "gap",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "end",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "end_label",
+            "title": "Measure"
+          },
+          {
+            "field": "end",
+            "title": "Percent",
+            "format": ".0f"
+          },
+          {
+            "field": "source",
+            "title": "Source"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 8,
+        "align": "left",
+        "baseline": "middle",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "gap",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "start",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "gap_points",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "value": "#111827"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "gridColor": "#ececec"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 16,
+      "anchor": "start",
+      "fontWeight": "bold"
+    }
+  }
+}

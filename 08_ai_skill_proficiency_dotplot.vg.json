@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Top-rated AI skills Australian workers believe they are very or extremely proficient in.",
+  "title": "Even basic AI skills are not yet widespread",
+  "width": 560,
+  "height": 260,
+  "data": {
+    "url": "chart_08_ai_skill_proficiency.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 150,
+    "color": "#7C3AED"
+  },
+  "encoding": {
+    "y": {
+      "field": "skill",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null
+    },
+    "x": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Very/extremely proficient (%)",
+      "scale": {
+        "domain": [
+          0,
+          35
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "skill",
+        "title": "Skill"
+      },
+      {
+        "field": "value",
+        "title": "Percent",
+        "format": ".0f"
+      },
+      {
+        "field": "source",
+        "title": "Source"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "gridColor": "#ececec"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 16,
+      "anchor": "start",
+      "fontWeight": "bold"
+    }
+  }
+}
