@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Are Australian Workers Ready for the AI Revolution?</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">AI and the Australian workforce</div>
+      <h1>Are Australian workers ready for the AI revolution?</h1>
+      <p class="subtitle">AI is already entering Australian workplaces, but training, confidence and clear workplace rules are not keeping up evenly.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="story-section">
+      <div class="section-kicker">1. The adoption gap</div>
+      <h2>AI is already at work, but support is lagging</h2>
+      <p>The first charts establish the main story: many computer-based Australian workers are using AI, but fewer have received formal training.</p>
+      <div class="chart-grid">
+        <div class="chart-card full"><div id="vis01"></div><p class="chart-note">This chart introduces the adoption-versus-preparation problem.</p></div>
+        <div class="chart-card"><div id="vis02"></div><p class="chart-note">A dumbbell chart makes the gap between related measures visually obvious.</p></div>
+        <div class="chart-card"><div id="vis03"></div><p class="chart-note">The waffle chart turns the training percentage into a simple “out of 100 workers” idea.</p></div>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="section-kicker">2. The risk and training gap</div>
+      <h2>Workers need more than access to AI tools</h2>
+      <p>Readiness is not only about whether workers can open an AI tool. It is also about whether they feel confident using it safely and responsibly.</p>
+      <div class="chart-grid">
+        <div class="chart-card"><div id="vis04"></div><p class="chart-note">This helps explain why workplace rules and training matter.</p></div>
+        <div class="chart-card"><div id="vis05"></div><p class="chart-note">Desired training is compared with the training currently offered.</p></div>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="section-kicker">3. What AI use looks like</div>
+      <h2>Most workplace AI use is still practical and text-based</h2>
+      <p>These charts show what kinds of tools and AI tasks are currently most common.</p>
+      <div class="chart-grid">
+        <div class="chart-card"><div id="vis06"></div><p class="chart-note">Generative text platforms are clearly ahead of other workplace AI tools.</p></div>
+        <div class="chart-card"><div id="vis10"></div><p class="chart-note">For the wider public, GenAI is mostly being used to generate text.</p></div>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="section-kicker">4. Uneven readiness</div>
+      <h2>Not every worker enters the AI shift with the same confidence</h2>
+      <p>The data suggests a divide by generation, skill confidence, age, education and occupation.</p>
+      <div class="chart-grid">
+        <div class="chart-card"><div id="vis07"></div><p class="chart-note">This gives the story a human angle by showing generational differences.</p></div>
+        <div class="chart-card"><div id="vis08"></div><p class="chart-note">Even the strongest self-reported AI skills are not yet widespread.</p></div>
+        <div class="chart-card full"><div id="vis09"></div><p class="chart-note">This chart connects workplace readiness to the broader AI divide in Australian society.</p></div>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="section-kicker">5. Place matters</div>
+      <h2>Digital inclusion is one foundation for AI readiness</h2>
+      <p>The map does not claim to show workplace AI training by state. Instead, it shows a related foundation: how digitally included each state or territory is.</p>
+      <div class="chart-grid">
+        <div class="chart-card full"><div id="vis11"></div><p class="chart-note">A state map satisfies the geographic map requirement and links AI readiness to digital inclusion.</p></div>
+        <div class="chart-card full"><div id="vis12"></div><p class="chart-note">The ranking chart makes the map easier to compare precisely.</p></div>
+      </div>
+      <div class="callout"><strong>Final takeaway:</strong> Australia’s AI revolution is not only a technology adoption story. It is a preparation story: workers need training, confidence, safe rules and digital foundations to benefit from AI.</div>
+    </section>
+
+    <section class="story-section">
+      <div class="section-kicker">Sources</div>
+      <h2>Data sources used</h2>
+      <ul class="source-list">
+        <li>EY Australian AI Workforce Blueprint 2025.</li>
+        <li>Australian Digital Inclusion Index 2025 and the ADII AI divide case study.</li>
+        <li>Australian states GeoJSON boundary file from rowanhogan/australian-states. For final submission, consider replacing it with an official ABS boundary converted to GeoJSON.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with Vega-Lite. The chart JSON files now read from separate CSV files.</p>
+  </footer>
+
+  <script src="vega_lite_vis.js"></script>
+</body>
+</html>
